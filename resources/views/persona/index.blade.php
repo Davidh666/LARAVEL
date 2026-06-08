@@ -10,7 +10,10 @@
     <ul>
        
         @foreach($persona as $p)
-            <li>{{ $p->nombre}} - {{ $p->capacidad }}</li>
+            <li>{{ $p->nombre}} - {{ $p->capacidad }}
+
+            | <a href="{{ route('personas.editar', $p->id) }}">Editar</a>
+            </li>
         @endforeach
     </ul>
 

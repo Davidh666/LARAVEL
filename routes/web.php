@@ -26,6 +26,12 @@ Route::get('/', function () {
 Route::get('/persona',[PersonaController::class,'index' ]);
 Route ::get('/persona/crear',[PersonaController::class,'crear'])->name('personas.crear');
 Route::post('/personas/guardar', [PersonaController::class, 'guardar'])->name('personas.guardar');
+Route::get('/persona/{id}/editar', [PersonaController::class,'editar'])->name('personas.editar');
+Route::put('/persona/{id}/actualizar', [PersonaController::class,'actualizar'])->name('personas.actualizar');
+
+
+
+
 
 Route::get('/aula', [AulaController::class, 'index'])->name('aulas.index');
 Route::get('/aula/crear', [AulaController::class, 'crear'])->name('aulas.crear');
